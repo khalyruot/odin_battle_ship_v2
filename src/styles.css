@@ -1,0 +1,74 @@
+/* styles.css */
+
+#container{
+    height: 350px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.content{
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sub_content{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    display: flex;
+
+}
+
+#X_box{
+    color: red;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+#O_box{
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+#box_1{
+    background-color: aqua;
+    
+    
+}
+
+#box_2{
+    background-color: yellow;
+   
+}
+
+#body_box{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    margin: 0;
+    padding-top: 60px;
+    justify-items: center;
+    align-items: center;
+}
+
+#welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+#welcome_turn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+#welcome_title{
+    font-size: 20px;
+    margin: 5px;
+    font-weight: bold;
+}
