@@ -1,4 +1,5 @@
 class setbox{
+    
     setbox_X(a){
         a.innerText = "X";
         a.setAttribute("id","X_box");

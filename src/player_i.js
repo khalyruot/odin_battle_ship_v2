@@ -72,27 +72,32 @@ class player_i{
             box_arr[t].onclick = function(){
                 
                 getValue();
-                updateValue();
+                
                 const index_of_t =  box_total_arr.indexOf(t);
                 box_total_arr.splice(index_of_t,1);
-                console.log("box_total_arr: " + box_total_arr);
                 console.log("t: " + t);
 
                 let welcome_value_text = document.getElementById("welcome");
                 x = welcome_value_text.innerText;
+
+                console.log("x: " + x);
+                console.log("player: "+ player);
                 
-                if(!box_total_arr.includes(t)){
-                    console.log("A");
+                if(!box_total_arr.includes(t) && !welcome_value.includes(t)&& x!=player && !x.includes("Win")){
                     welcome_value_text.innerText = player;
+                    console.log("A");
+                    updateValue();
 
                 }
+                else if(x.includes("Win")){
+                    document.getElementById("welcome_turn").innerText = "";
+                }
+
+                
 
                 let welcome_value_text_12 = document.getElementById("welcome");
                 y = welcome_value_text_12.innerText;
-                console.log("x: " + x);
-                console.log("y: " + y);
 
-                console.log(x === y);
 
                 if(x === y){
                     console.log("Not good!");
@@ -129,7 +134,7 @@ class player_i{
                         
                     }
                    
-                    else if(switch_number==1){
+                    else if(switch_number == 1){
                         
                         setBox.setbox_O(box_arr[t]);
                         
@@ -144,9 +149,9 @@ class player_i{
                     console.log(player+", You Win!");
                     const result = document.getElementById("welcome");
                     result.innerText = player+", You Win!";
+                    x = result.innerText;
                 }
                 
-               
                
             }
            
