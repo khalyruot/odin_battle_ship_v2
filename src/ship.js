@@ -2,10 +2,13 @@
 class Ship{
     
     hit(time_hit){
+        console.log("time_hit: "+time_hit);
         return time_hit;
     }
     
+    
     isShunk(time_hit, ship_hitted,b){
+       
         if(time_hit == ship_hitted){
             console.log("Ship " + b + " is shunk.");
             return "shunk";
