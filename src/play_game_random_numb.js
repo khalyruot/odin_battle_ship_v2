@@ -3,7 +3,7 @@ class play_game_random_numb{
 
         var arr = [];
         while(arr.length < 100){
-            var r = Math.floor(Math.random() * 100) + 1;
+            var r = Math.floor(Math.random() * 100);
             if(arr.indexOf(r) === -1) arr.push(r);
         }
         return arr;

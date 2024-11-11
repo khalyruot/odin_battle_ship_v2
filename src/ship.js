@@ -2,7 +2,7 @@
 class Ship{
     
     hit(time_hit){
-        console.log("time_hit: "+time_hit);
+      
         return time_hit;
     }
     
