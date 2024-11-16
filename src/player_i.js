@@ -48,39 +48,6 @@ class player_i{
         let welcome_value_text = document.getElementById("welcome_turn");
         let x = welcome_value_text.innerText; 
 
-        /*let box_total_arr = []
-            for(let u = 0; u<100; u++){
-                box_total_arr.push(u);
-        }
-        
-        const index_of_t =  box_total_arr.indexOf(t);
-        box_total_arr.splice(index_of_t,1);
-        console.log("t: " + t);
-
-       
-
-        /*if(!box_total_arr.includes(t) && !welcome_value.includes(t)&& !x==player && !x.includes("Win")){
-            welcome_value_text.innerText = player;
-            console.log("B");
-            welcome_value.push(t);
-
-        }
-     
-
-        let welcome_value_text_12 = document.getElementById("welcome");
-        y = welcome_value_text_12.innerText;
-        console.log("y: "+y)
-
-
-        if(x === y){
-            console.log("Not good!");
-            switch_number = 0;
-        }
-        else{
-            console.log("Good!");
-            switch_number = 1;
-        }*/
-
         for(let j = 0; j < initial_ship_copy.length; j++){
             
             if(total_arr.includes(t) && !x.includes("Win")){
