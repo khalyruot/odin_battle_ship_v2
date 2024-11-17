@@ -24,7 +24,6 @@ class create_ship {
         for (let i = 0; i < ship.length; i++) {
             for (let j = 0; j < ship[i].length; j++) {
                 const a = board[ship[i][j]];
-                a.innerText = i;
                 a.style.backgroundColor = "red";
                 board_to_return.push(a);
             }

@@ -30,7 +30,7 @@ class player_i{
             }
 
         for(let t = 0; t < 100; t++){
-            box_arr[t].innerText = t;
+            //box_arr[t].innerText = t;
         }
         return box_arr;
     }

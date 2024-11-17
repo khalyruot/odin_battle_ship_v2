@@ -97,9 +97,10 @@ for(let kkkk = 0; kkkk<19; kkkk++){
         
         for(let iiii = 0; iiii<total_ship.length; iiii++){
         
-          if(total_ship[iiii].includes(ship_to_move[kkkk]) && switch_board.innerText == "Human"){
+          if(total_ship[iiii].includes(ship_to_move[kkkk]) && !box_human_select.includes(total_ship[iiii]) && switch_board.innerText == "Human"){
             ship_set_to_green(total_ship[iiii]);
             switch_board.innerText = "Computer";
+            //total_ship.splice(total_ship[iiii],1);
            
             
             for(let x = 0; x<100; x++){
@@ -121,11 +122,11 @@ for(let kkkk = 0; kkkk<19; kkkk++){
                         let cc = 0; let bb = 0; let aa = 0; 
                     
                     if(total_ship.includes(total_ship[iiii])){
-
+                        
                         if(total_ship[iiii].length==4 && x <= 69 && switch_board.innerText == "Computer" 
                             && !box_computer_selected.includes(x) && !box_computer_selected.includes(x+10) && !box_computer_selected.includes(x+20)
                             && !box_computer_selected.includes(x+30) && !box_human_select.includes(total_ship[iiii])){
-                            console.log(total_ship[iiii]);
+                           
                             pp = x;
                             qq = pp + 10;
                             rr = pp + 20;
@@ -199,7 +200,8 @@ for(let kkkk = 0; kkkk<19; kkkk++){
                                
                                 
                             }
-                        else if(total_ship[iiii].length==2 && x <= 89 && switch_board.innerText == "Computer" && !box_human_select.includes(total_ship[iiii])
+                        else if(total_ship[iiii].length==2 && ![9,19,29,39,49,59,69,79,89,99].includes(x) 
+                                && switch_board.innerText == "Computer" && !box_human_select.includes(total_ship[iiii])
                                 && total_ship[iiii]===ship_5 && !box_computer_selected.includes(x) && !box_computer_selected.includes(x+1)){
                                     dd = x;
                                     ee = dd + 1;
@@ -247,7 +249,7 @@ for(let kkkk = 0; kkkk<19; kkkk++){
                                     
                             }
                          
-
+                            
                             
                             if(box_human_select.length==9){
                                 console.log(box_computer_selected_arr);
