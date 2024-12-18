@@ -252,8 +252,12 @@ for(let kkkk = 0; kkkk<19; kkkk++){
                             
                             
                             if(box_human_select.length==9){
-                                console.log(box_computer_selected_arr);
+                                function wait(){
+                                    console.log(box_computer_selected_arr);
+                                }
+                                
                                 let re_arrange_arr = rearrangeArray_Index(box_computer_selected_arr);
+                                setTimeout(wait,3000)
                                 player_computer_div.innerText = "";
                                 player_human_div.innerText = "";
                                 let player_human = player_real_computer.player_i_human_or_computer(player_human_div, "Human", re_arrange_arr);
